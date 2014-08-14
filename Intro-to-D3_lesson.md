@@ -175,4 +175,5 @@ In the next lesson I will discuss how to incorporate your D3 so that it reads wi
 ## Resources ##
 
 [D3.js Website](http://http://d3js.org/)
+
 [Interactive Data Visualization for the Web](http://chimera.labs.oreilly.com/books/1230000000345/) - a great introduction to D3.js
