@@ -108,37 +108,55 @@ svg.selectAll("rect")
 
 Let's break it down:
 
+```
 svg.selectAll("rect")
+```
 tells D3 we are making rectangles
 
+```
 .data(data)
+```
 takes in your data
 
+```
 .enter()
+```
 enters the data
 
+```
 .append("rect")
+```
 appends a rectangle for each of your data points
 
+```
 .attr("x", function(d, i) {
 				return i * ((w / data.length) + padding)
 			})
+```
 sets the starting x coordinate of each bar according to its index number in the dataset
 
+```
 .attr("y", function(d){
 				return h - yScale(d)
 			})
+```
 sets the starting y coordinate for each bar according to the value of the data point; must be subtracted from bottom because y coordinate 0 is located at the top
 
+```
 .attr("width", w/data.length - padding)
+```
 sets the width of each bar according to the width of the SVG element, the number of values we have, and the padding between each bar
 
+```
 .attr("height", function(d) {
 				return yScale(d)
 			})
+```
 sets the height of each bar according to the value of each data point
 
+```
 .attr("fill", "red")
+```
 sets the fill color for each bar
 
 
@@ -153,3 +171,8 @@ window.onload = function() { //D3 Script in here }
 ## Next Lesson ##
 
 In the next lesson I will discuss how to incorporate your D3 so that it reads with your MongoDB data from your Rails app.
+
+## Resources ##
+
+[D3.js Website](http://http://d3js.org/)
+[Interactive Data Visualization for the Web](http://chimera.labs.oreilly.com/books/1230000000345/) - a great introduction to D3.js
