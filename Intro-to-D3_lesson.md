@@ -215,8 +215,8 @@ In the next lesson I will discuss how to incorporate your D3 so that it reads wi
 
 ## Resources ##
 
-[D3.js Website](http://d3js.org/)
+[D3.js Website](d3js.org/)
 
-[Interactive Data Visualization for the Web](http://chimera.labs.oreilly.com/books/1230000000345/) - a great introduction to D3.js
+[Interactive Data Visualization for the Web](chimera.labs.oreilly.com/books/1230000000345/) - a great introduction to D3.js
 
-[Other JavaScript Frameworks and Tools for Data Visualization](http://www.fastcodesign.com/3029239/infographic-of-the-day/30-simple-tools-for-data-visualization)
+[Other JavaScript Frameworks and Tools for Data Visualization](www.fastcodesign.com/3029239/infographic-of-the-day/30-simple-tools-for-data-visualization)
