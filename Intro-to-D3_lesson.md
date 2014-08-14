@@ -213,7 +213,7 @@ window.onload = function() {
 
 In the next lesson I will discuss how to incorporate your D3 so that it reads with your MongoDB data from your Rails app.
 
-## Additional Resources ##
+## Resources ##
 
 [D3.js Website](http://http://d3js.org/)
 
