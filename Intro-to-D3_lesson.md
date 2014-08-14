@@ -168,6 +168,47 @@ In order for the script to execute, we should attach it to a JavaScript event. I
 window.onload = function() { //D3 Script in here }
 ```
 
+### Full JavaScript ###
+
+When compiled, our script should look like this:
+
+```
+window.onload = function() {
+
+		var data = [1,5,4,9,2];
+
+		var w = 500;
+		var h = 400;
+		var padding = 5;
+
+		var yScale = d3.scale.linear()
+			.domain([0, d3.max(data, function(d) { return d })])
+			.range([0, h]);
+
+		var svg = d3.select("#svgDiv")
+			.append("svg")
+			.attr("width", w)
+			.attr("height", h);
+
+		svg.selectAll("rect")
+			.data(data)
+			.enter()
+			.append("rect")
+			.attr("x", function(d, i) {
+				return i * ((w / data.length) + padding)
+			})
+			.attr("y", function(d){
+				return h - yScale(d)
+			})
+			.attr("width", w/data.length - padding)
+			.attr("height", function(d) {
+				return yScale(d)
+			})
+			.attr("fill", "red");
+
+		};
+```
+
 ## Next Lesson ##
 
 In the next lesson I will discuss how to incorporate your D3 so that it reads with your MongoDB data from your Rails app.
