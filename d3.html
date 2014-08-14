@@ -5,7 +5,39 @@
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 	<script>
-		
+		window.onload = function() {
+
+			var data = [6, 8, 15, 7, 9, 0, 8];
+
+			var h = 500;
+			var w = 700;
+			var padding = 5;
+
+			var yScale = d3.scale.linear()
+            	.domain([0, d3.max(data, function(d) { return d })])
+            	.range([0, h]);
+
+            var svg = d3.select("#svgDiv")
+            	.append("svg")
+            	.attr("width", w)
+            	.attr("height", h)
+
+            svg.selectAll("rect")
+            	.data(data)
+            	.enter()
+            	.append("rect")
+            	.attr("x", function(d, i){
+            		return i * ((w/data.length))
+            	})
+            	.attr("y", function(d){
+            		return h - yScale(d)
+            	})
+            	.attr("width", w/data.length - padding)
+            	.attr("height", function(d) {return yScale(d)
+            	})
+            	.attr("fill", "red")
+
+		}
 	
 	</script>
 
